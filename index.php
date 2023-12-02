@@ -244,7 +244,7 @@ while ($data = $sql->fetch_assoc()) {
 									<li class="nav-item">
 										<a href="?page=data-pegawai" class="nav-link">
 											<i class="far fa-circle nav-icon"></i>
-											<p>Rekap Data Pegawai</p>
+											<p>Rekap / Bezetting Pegawai</p>
 										</a>
 									</li>
 

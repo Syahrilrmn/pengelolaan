@@ -7,10 +7,6 @@
 
     <div class="card-body">
         <div class="table-responsive">
-            <!-- <div>
-                <a href="?page=add-pegawai" class="btn btn-primary">
-                    <i class="fa fa-plus"></i> Tambah Data</a>
-            </div> -->
             <br>
             <span style="margin-left:500px; margin-top:4px; position: absolute;"><?php echo $hariIni->format('d-F-Y') . '<br>'; ?></span>
             <table id="example1" class="table table-bordered table-striped">
@@ -22,7 +18,7 @@
                         <th>Karpeg</th>
                         <th width="150px">Pangkat</th>
                         <th width="150px">Golongan</th>
-                       
+
                     </tr>
                 </thead>
                 <tbody>
@@ -30,12 +26,15 @@
                     <?php
                     $no = 1;
 
-                    // Tambahkan ORDER BY pada query SQL untuk mengurutkan berdasarkan pangkat
+                    // Tentukan urutan pangkat
+                    $urutanPangkat = ['Pengatur', 'Pembina', 'Penata', 'Juru'];
+
+                    // Tambahkan ORDER BY pada query SQL untuk mengurutkan berdasarkan urutan pangkat
                     if (isset($_POST['new_pegawai'])) {
                         $new_pegawai = $_POST['new_pegawai'];
-                        $sql = mysqli_query($koneksi, "SELECT * FROM tb_pegawai WHERE new_pegawai='$new_pegawai' ORDER BY pangkat");
+                        $sql = mysqli_query($koneksi, "SELECT * FROM tb_pegawai WHERE new_pegawai='$new_pegawai' ORDER BY FIELD(pangkat, '" . implode("','", $urutanPangkat) . "')");
                     } else {
-                        $sql = $koneksi->query("SELECT * FROM tb_pegawai ORDER BY pangkat");
+                        $sql = $koneksi->query("SELECT * FROM tb_pegawai ORDER BY FIELD(pangkat, '" . implode("','", $urutanPangkat) . "')");
                     }
 
                     while ($data = $sql->fetch_assoc()) {
@@ -58,15 +57,14 @@
                                 <?php echo $data['pangkat']; ?>
                             </td>
                             <td>
-                            <?php echo $data['golongan']; ?>
+                                <?php echo $data['golongan']; ?>
                             </td>
-
-                            
                         </tr>
 
                     <?php
                     }
                     ?>
+
 
                 </tbody>
                 </tfoot>

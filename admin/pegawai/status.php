@@ -64,9 +64,12 @@
                                     <?php echo $data['pangkat']; ?>/<?php echo $data['golongan']; ?>
                                 </td>
                                 <td>
-                                    <span class="badge <?php echo ($data['ket'] == 'AKTIF') ? 'badge-success' : 'badge-danger'; ?>">
-                                        <?php echo $data['ket']; ?>
-                                    </span>
+                                    <a href="?page=edit-status-01&kode=<?php echo $data['nip']; ?>">
+
+                                        <span class="badge <?php echo ($data['ket'] == 'AKTIF') ? 'badge-success' : 'badge-danger'; ?>">
+                                            <?php echo $data['ket']; ?>
+                                        </span>
+                                    </a>
                                 </td>
                             </tr>
 
