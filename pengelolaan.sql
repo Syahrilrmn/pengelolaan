@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2023 at 06:28 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 7.4.33
+-- Waktu pembuatan: 02 Des 2023 pada 10.44
+-- Versi server: 10.4.27-MariaDB
+-- Versi PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `r_keluarga`
+-- Struktur dari tabel `r_keluarga`
 --
 
 CREATE TABLE `r_keluarga` (
@@ -36,7 +36,7 @@ CREATE TABLE `r_keluarga` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `r_kepegawaian`
+-- Struktur dari tabel `r_kepegawaian`
 --
 
 CREATE TABLE `r_kepegawaian` (
@@ -50,7 +50,7 @@ CREATE TABLE `r_kepegawaian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `r_kepegawaian`
+-- Dumping data untuk tabel `r_kepegawaian`
 --
 
 INSERT INTO `r_kepegawaian` (`id`, `id_pegawai`, `perusahaan`, `jabatan`, `pangkat`, `masuk`, `keluar`) VALUES
@@ -59,7 +59,7 @@ INSERT INTO `r_kepegawaian` (`id`, `id_pegawai`, `perusahaan`, `jabatan`, `pangk
 -- --------------------------------------------------------
 
 --
--- Table structure for table `r_pendidikan`
+-- Struktur dari tabel `r_pendidikan`
 --
 
 CREATE TABLE `r_pendidikan` (
@@ -74,7 +74,7 @@ CREATE TABLE `r_pendidikan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `r_pendidikan`
+-- Dumping data untuk tabel `r_pendidikan`
 --
 
 INSERT INTO `r_pendidikan` (`id`, `id_pegawai`, `tingkat`, `sekolah`, `jurusan`, `masuk`, `keluar`, `gelar`) VALUES
@@ -83,7 +83,7 @@ INSERT INTO `r_pendidikan` (`id`, `id_pegawai`, `tingkat`, `sekolah`, `jurusan`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_daftargaji`
+-- Struktur dari tabel `tb_daftargaji`
 --
 
 CREATE TABLE `tb_daftargaji` (
@@ -96,7 +96,7 @@ CREATE TABLE `tb_daftargaji` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_daftargaji`
+-- Dumping data untuk tabel `tb_daftargaji`
 --
 
 INSERT INTO `tb_daftargaji` (`id_daftargaji`, `golongan`, `pangkat`, `mkg`, `gaji_now`, `gaji_before`) VALUES
@@ -106,7 +106,7 @@ INSERT INTO `tb_daftargaji` (`id_daftargaji`, `golongan`, `pangkat`, `mkg`, `gaj
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_data_gaji`
+-- Struktur dari tabel `tb_data_gaji`
 --
 
 CREATE TABLE `tb_data_gaji` (
@@ -121,7 +121,7 @@ CREATE TABLE `tb_data_gaji` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_data_gaji`
+-- Dumping data untuk tabel `tb_data_gaji`
 --
 
 INSERT INTO `tb_data_gaji` (`nip`, `nama`, `tmt`, `pangkat`, `golongan`, `masakerja`, `gaji_before`, `gaji_now`) VALUES
@@ -138,12 +138,13 @@ INSERT INTO `tb_data_gaji` (`nip`, `nama`, `tmt`, `pangkat`, `golongan`, `masake
 ('197906162014062005', 'Sri Wahyuni', '2014-01-02', 'Penata', 'IIIc', '18', 3528100, 3639200),
 ('197910232006041007', 'Wisnu Kartika Hadi Putra', '2007-10-01', 'Penata', 'IIIc', '16', 3420300, 3420300),
 ('198202102009032008', 'Widarini Febrianingrum', '2009-03-01', 'Penata', 'IIIc', '12', 3214700, 3214700),
-('199303192019032019', 'Rika', '2020-03-01', 'Penata', 'IIIa', '2', 2534000, 2613800);
+('199303192019032019', 'Rika', '2020-03-01', 'Penata', 'IIIa', '2', 2534000, 2613800),
+('761615252533569', 'Syahrilrm', '2023-12-02', 'Pengatur', 'IVe', '', 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_golongan`
+-- Struktur dari tabel `tb_golongan`
 --
 
 CREATE TABLE `tb_golongan` (
@@ -152,7 +153,7 @@ CREATE TABLE `tb_golongan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_golongan`
+-- Dumping data untuk tabel `tb_golongan`
 --
 
 INSERT INTO `tb_golongan` (`id_golongan`, `golongan`) VALUES
@@ -177,7 +178,7 @@ INSERT INTO `tb_golongan` (`id_golongan`, `golongan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_info`
+-- Struktur dari tabel `tb_info`
 --
 
 CREATE TABLE `tb_info` (
@@ -189,7 +190,7 @@ CREATE TABLE `tb_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_info`
+-- Dumping data untuk tabel `tb_info`
 --
 
 INSERT INTO `tb_info` (`id_info`, `info`, `dari_tgl`, `sampai_tgl`, `ket`) VALUES
@@ -201,7 +202,7 @@ INSERT INTO `tb_info` (`id_info`, `info`, `dari_tgl`, `sampai_tgl`, `ket`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kadis`
+-- Struktur dari tabel `tb_kadis`
 --
 
 CREATE TABLE `tb_kadis` (
@@ -215,7 +216,7 @@ CREATE TABLE `tb_kadis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 --
--- Dumping data for table `tb_kadis`
+-- Dumping data untuk tabel `tb_kadis`
 --
 
 INSERT INTO `tb_kadis` (`nip`, `nama`, `alamat`, `jk`, `tempat_lahir`, `tanggal_lahir`, `foto`) VALUES
@@ -224,7 +225,7 @@ INSERT INTO `tb_kadis` (`nip`, `nama`, `alamat`, `jk`, `tempat_lahir`, `tanggal_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kgb`
+-- Struktur dari tabel `tb_kgb`
 --
 
 CREATE TABLE `tb_kgb` (
@@ -252,7 +253,7 @@ CREATE TABLE `tb_kgb` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_kgb`
+-- Dumping data untuk tabel `tb_kgb`
 --
 
 INSERT INTO `tb_kgb` (`id_kgb`, `no_surat`, `perihal`, `tanggal_surat`, `nama`, `tempat_lahir`, `tanggal_lahir`, `nip`, `pangkat`, `jabatan`, `unit`, `pejabat`, `no_sk`, `masakerja`, `gajilama`, `tgl_mulai`, `gajibaru`, `golongan`, `masakerja_baru`, `tgl`, `tgl_kenaikan`) VALUES
@@ -265,7 +266,7 @@ INSERT INTO `tb_kgb` (`id_kgb`, `no_surat`, `perihal`, `tanggal_surat`, `nama`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_naik_gaji`
+-- Struktur dari tabel `tb_naik_gaji`
 --
 
 CREATE TABLE `tb_naik_gaji` (
@@ -278,7 +279,7 @@ CREATE TABLE `tb_naik_gaji` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_naik_gaji`
+-- Dumping data untuk tabel `tb_naik_gaji`
 --
 
 INSERT INTO `tb_naik_gaji` (`nip`, `nama`, `jeniskelamin`, `tmt`, `unit`, `upload`) VALUES
@@ -291,7 +292,7 @@ INSERT INTO `tb_naik_gaji` (`nip`, `nama`, `jeniskelamin`, `tmt`, `unit`, `uploa
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pangkat`
+-- Struktur dari tabel `tb_pangkat`
 --
 
 CREATE TABLE `tb_pangkat` (
@@ -300,7 +301,7 @@ CREATE TABLE `tb_pangkat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_pangkat`
+-- Dumping data untuk tabel `tb_pangkat`
 --
 
 INSERT INTO `tb_pangkat` (`id_pangkat`, `pangkat`) VALUES
@@ -312,7 +313,7 @@ INSERT INTO `tb_pangkat` (`id_pangkat`, `pangkat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pegawai`
+-- Struktur dari tabel `tb_pegawai`
 --
 
 CREATE TABLE `tb_pegawai` (
@@ -327,33 +328,35 @@ CREATE TABLE `tb_pegawai` (
   `jabatan` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `unit` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `tmt` varchar(10) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
-  `foto` varchar(255) NOT NULL
+  `foto` varchar(255) NOT NULL,
+  `ket` enum('AKTIF','NON AKTIF') NOT NULL DEFAULT 'AKTIF'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_pegawai`
+-- Dumping data untuk tabel `tb_pegawai`
 --
 
-INSERT INTO `tb_pegawai` (`nip`, `nama`, `karpeg`, `jk`, `tempat_lahir`, `tanggal_lahir`, `pangkat`, `golongan`, `jabatan`, `unit`, `tmt`, `foto`) VALUES
-('19630001', 'Wafda', 'B 0001', 'perempuan', 'Banjarmasin', '2023-08-10', 'Penata', 'IIIa', 'Kepala Bidang PTK', 'Dinas Pendidikan Kota Banjarmasin', '2023-08-03', 'foto cwe formal.jpg'),
-('196306061985032010', 'Rubina', 'N 007456', 'perempuan', 'Paringin', '1963-03-03', 'Pembina', 'IVb', 'Guru Mapel', 'SDN - SN PASAR LAMA 1', '1985-02-25', 'foto cwe formal.jpg'),
-('196410031989021002', 'Muhammad Zikri', ' P 012511', 'laki-laki', 'Banjarmasin', '1964-10-03', 'Pembina', 'IVb', 'Guru Mapel', 'SMP NEGERI 15', '1989-02-01', 'fto laki-laki formal.jpg'),
-('196603241988042001', 'Yesni Mudiarti', 'N 007891', 'perempuan', 'Tabalong', '1966-03-24', 'Pembina', 'IVb', 'Kepala Sekolah', 'SD KARTIKA V-2', '1988-04-01', 'foto cwe formal.jpg'),
-('196608111989021001', 'Abdul Hamid', 'E 031255', 'laki-laki', 'Awang', '1966-08-11', 'Pembina', 'IVc', 'Guru Mapel', 'SMP NEGERI 01', '1989-02-01', 'fto laki-laki formal.jpg'),
-('196705091993021003', 'Jumansyah', 'B 043781', 'laki-laki', 'Barabai', '1967-05-09', 'Penata', 'IIId', 'Kepala Sekolah', 'SMP MUHAMMADIYAH 6', '1993-02-01', 'fto laki-laki formal.jpg'),
-('197106112014062004', 'Aida', 'C 008911', 'perempuan', 'Banjarmasin', '1971-11-06', 'Penata', 'IIIb', 'Tenaga Administrasi Sekolah', 'SMP NEGERI 34', '2014-06-01', 'foto cwe formal.jpg'),
-('197503192007012009', 'Mahmudah', 'D 019647', 'perempuan', 'Hambuku Pasar', '1975-03-19', 'Penata', 'IIIc', 'Guru Mapel', 'SMP NEGERI 01', '2007-01-01', 'foto cwe formal.jpg'),
-('197511152000032003', 'Parsini', 'B 014567', 'laki-laki', 'Banyumas', '1975-11-15', 'Pengatur', 'IId', 'Guru Mapel', 'SD HIPPINDO', '2015-08-24', 'foto cwe formal.jpg'),
-('197711112014061010', 'Akhyar Gunawan', 'Q 023401', 'laki-laki', 'Banjarmasin', '1977-11-11', 'Penata', 'IIIb', 'Guru Kelas SD/MI', 'SD NEGERI BENUA ANYAR 2', '2017-01-01', 'fto laki-laki formal.jpg'),
-('197906162014062005', 'Sri Wahyuni', 'A 005399', 'perempuan', 'Banjarmasin', '1979-06-16', 'Penata', 'IIIc', 'Guru Kelas', 'SD NEGERI GADANG 2', '2014-01-02', 'foto cwe formal.jpg'),
-('197910232006041007', 'Wisnu Kartika Hadi Putra', 'C 004376', 'laki-laki', 'Probolinggo', '1979-10-23', 'Penata', 'IIIc', 'Guru Mapel', 'SMP NEGERI 05', '2007-10-01', 'fto laki-laki formal.jpg'),
-('198202102009032008', 'Widarini Febrianingrum', 'S 027001', 'perempuan', 'Banjarmasin', '1982-02-10', 'Penata', 'IIIc', 'Kepala Sekolah', 'SD NEGERI ANTASAN BESAR 7', '2009-03-01', 'foto cwe formal.jpg'),
-('199303192019032019', 'Rika', 'Q 237401', 'perempuan', 'Banjarmasin', '1993-03-19', 'Penata', 'IIIa', 'Guru Kelas', 'SDN SUNGAI ANDAI 4', '2020-03-01', 'foto cwe formal.jpg');
+INSERT INTO `tb_pegawai` (`nip`, `nama`, `karpeg`, `jk`, `tempat_lahir`, `tanggal_lahir`, `pangkat`, `golongan`, `jabatan`, `unit`, `tmt`, `foto`, `ket`) VALUES
+('19630001', 'Wafda', 'B 0001', 'perempuan', 'Banjarmasin', '2023-08-10', 'Penata', 'IIIa', 'Kepala Bidang PTK', 'Dinas Pendidikan Kota Banjarmasin', '2023-08-03', 'foto cwe formal.jpg', 'NON AKTIF'),
+('196306061985032010', 'Rubina', 'N 007456', 'perempuan', 'Paringin', '1963-03-03', 'Pembina', 'IVb', 'Guru Mapel', 'SDN - SN PASAR LAMA 1', '1985-02-25', 'foto cwe formal.jpg', 'AKTIF'),
+('196410031989021002', 'Muhammad Zikri', ' P 012511', 'laki-laki', 'Banjarmasin', '1964-10-03', 'Pembina', 'IVb', 'Guru Mapel', 'SMP NEGERI 15', '1989-02-01', 'fto laki-laki formal.jpg', 'AKTIF'),
+('196603241988042001', 'Yesni Mudiarti', 'N 007891', 'perempuan', 'Tabalong', '1966-03-24', 'Pembina', 'IVb', 'Kepala Sekolah', 'SD KARTIKA V-2', '1988-04-01', 'foto cwe formal.jpg', 'AKTIF'),
+('196608111989021001', 'Abdul Hamid', 'E 031255', 'laki-laki', 'Awang', '1966-08-11', 'Pembina', 'IVc', 'Guru Mapel', 'SMP NEGERI 01', '1989-02-01', 'fto laki-laki formal.jpg', 'AKTIF'),
+('196705091993021003', 'Jumansyah', 'B 043781', 'laki-laki', 'Barabai', '1967-05-09', 'Penata', 'IIId', 'Kepala Sekolah', 'SMP MUHAMMADIYAH 6', '1993-02-01', 'fto laki-laki formal.jpg', 'AKTIF'),
+('197106112014062004', 'Aida', 'C 008911', 'perempuan', 'Banjarmasin', '1971-11-06', 'Penata', 'IIIb', 'Tenaga Administrasi Sekolah', 'SMP NEGERI 34', '2014-06-01', 'foto cwe formal.jpg', 'AKTIF'),
+('197503192007012009', 'Mahmudah', 'D 019647', 'perempuan', 'Hambuku Pasar', '1975-03-19', 'Penata', 'IIIc', 'Guru Mapel', 'SMP NEGERI 01', '2007-01-01', 'foto cwe formal.jpg', 'AKTIF'),
+('197511152000032003', 'Parsini', 'B 014567', 'laki-laki', 'Banyumas', '1975-11-15', 'Pengatur', 'IId', 'Guru Mapel', 'SD HIPPINDO', '2015-08-24', 'foto cwe formal.jpg', 'AKTIF'),
+('197711112014061010', 'Akhyar Gunawan', 'Q 023401', 'laki-laki', 'Banjarmasin', '1977-11-11', 'Penata', 'IIIb', 'Guru Kelas SD/MI', 'SD NEGERI BENUA ANYAR 2', '2017-01-01', 'fto laki-laki formal.jpg', 'AKTIF'),
+('197906162014062005', 'Sri Wahyuni', 'A 005399', 'perempuan', 'Banjarmasin', '1979-06-16', 'Penata', 'IIIc', 'Guru Kelas', 'SD NEGERI GADANG 2', '2014-01-02', 'foto cwe formal.jpg', 'AKTIF'),
+('197910232006041007', 'Wisnu Kartika Hadi Putra', 'C 004376', 'laki-laki', 'Probolinggo', '1979-10-23', 'Penata', 'IIIc', 'Guru Mapel', 'SMP NEGERI 05', '2007-10-01', 'fto laki-laki formal.jpg', 'AKTIF'),
+('198202102009032008', 'Widarini Febrianingrum', 'S 027001', 'perempuan', 'Banjarmasin', '1982-02-10', 'Penata', 'IIIc', 'Kepala Sekolah', 'SD NEGERI ANTASAN BESAR 7', '2009-03-01', 'foto cwe formal.jpg', 'AKTIF'),
+('199303192019032019', 'Rika', 'Q 237401', 'perempuan', 'Banjarmasin', '1993-03-19', 'Penata', 'IIIa', 'Guru Kelas', 'SDN SUNGAI ANDAI 4', '2020-03-01', 'foto cwe formal.jpg', 'AKTIF'),
+('761615252533569', 'Syahrilrm', 's', 'laki-laki', 'astambul', '2000-02-11', 'Pengatur', 'IVe', 'nn', 'nn', '2023-12-02', 'User_icon_2.svg.png', 'AKTIF');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pengguna`
+-- Struktur dari tabel `tb_pengguna`
 --
 
 CREATE TABLE `tb_pengguna` (
@@ -366,7 +369,7 @@ CREATE TABLE `tb_pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tb_pengguna`
+-- Dumping data untuk tabel `tb_pengguna`
 --
 
 INSERT INTO `tb_pengguna` (`id_pengguna`, `nama_pengguna`, `username`, `password`, `level`, `foto`) VALUES
@@ -386,12 +389,13 @@ INSERT INTO `tb_pengguna` (`id_pengguna`, `nama_pengguna`, `username`, `password
 (58, 'Abdul Hamid', '196608111989021001', '1234567890', 'Pegawai', 'fto laki-laki formal.jpg'),
 (59, 'Muhammad Zikri', '196410031989021002', '1234567890', 'Pegawai', 'fto laki-laki formal.jpg'),
 (60, 'Wafda Lina Azkiya', '19630887', '1234567890', 'Pegawai', 'foto cwe formal.jpg'),
-(61, 'Wafda', '19630001', '1234567890', 'Pegawai', 'foto cwe formal.jpg');
+(61, 'Wafda', '19630001', '1234567890', 'Pegawai', 'foto cwe formal.jpg'),
+(62, 'Syahrilrm', '761615252533569', '1234567890', 'Pegawai', 'User_icon_2.svg.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pensiun`
+-- Struktur dari tabel `tb_pensiun`
 --
 
 CREATE TABLE `tb_pensiun` (
@@ -408,7 +412,7 @@ CREATE TABLE `tb_pensiun` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_pensiun`
+-- Dumping data untuk tabel `tb_pensiun`
 --
 
 INSERT INTO `tb_pensiun` (`nip`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jk`, `usia`, `tgl_pensiun`, `tmt_kerja`, `gapok`, `no_rek`) VALUES
@@ -418,7 +422,7 @@ INSERT INTO `tb_pensiun` (`nip`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jk`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pkgb`
+-- Struktur dari tabel `tb_pkgb`
 --
 
 CREATE TABLE `tb_pkgb` (
@@ -439,7 +443,7 @@ CREATE TABLE `tb_pkgb` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 --
--- Dumping data for table `tb_pkgb`
+-- Dumping data untuk tabel `tb_pkgb`
 --
 
 INSERT INTO `tb_pkgb` (`nip`, `nama`, `jk`, `tmt`, `pangkat`, `golongan`, `jabatan`, `masakerja`, `gaji_before`, `unit`, `upload`, `sk_pangkat`, `sk_berkala`, `ket`) VALUES
@@ -456,7 +460,7 @@ INSERT INTO `tb_pkgb` (`nip`, `nama`, `jk`, `tmt`, `pangkat`, `golongan`, `jabat
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_ppensiun`
+-- Struktur dari tabel `tb_ppensiun`
 --
 
 CREATE TABLE `tb_ppensiun` (
@@ -494,7 +498,7 @@ CREATE TABLE `tb_ppensiun` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_spanish_ci;
 
 --
--- Dumping data for table `tb_ppensiun`
+-- Dumping data untuk tabel `tb_ppensiun`
 --
 
 INSERT INTO `tb_ppensiun` (`nip`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jk`, `usia`, `tmt_kinerja`, `gapok`, `no_rek`, `alasan`, `upload`, `upload1`, `upload2`, `upload3`, `upload4`, `upload5`, `upload6`, `upload7`, `upload8`, `upload9`, `upload10`, `upload11`, `upload12`, `upload13`, `upload14`, `upload15`, `upload16`, `upload17`, `upload18`, `upload19`, `ket`) VALUES
@@ -505,7 +509,7 @@ INSERT INTO `tb_ppensiun` (`nip`, `nama`, `tempat_lahir`, `tanggal_lahir`, `jk`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_profil`
+-- Struktur dari tabel `tb_profil`
 --
 
 CREATE TABLE `tb_profil` (
@@ -518,7 +522,7 @@ CREATE TABLE `tb_profil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tb_profil`
+-- Dumping data untuk tabel `tb_profil`
 --
 
 INSERT INTO `tb_profil` (`id_profil`, `nama_pemerintahan`, `nama_dinas`, `alamat`, `bidang`, `logo`) VALUES
@@ -527,7 +531,7 @@ INSERT INTO `tb_profil` (`id_profil`, `nama_pemerintahan`, `nama_dinas`, `alamat
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_riwayatkp`
+-- Struktur dari tabel `tb_riwayatkp`
 --
 
 CREATE TABLE `tb_riwayatkp` (
@@ -540,7 +544,7 @@ CREATE TABLE `tb_riwayatkp` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_riwayatkp`
+-- Dumping data untuk tabel `tb_riwayatkp`
 --
 
 INSERT INTO `tb_riwayatkp` (`nip`, `nama`, `tgl`, `jabatan_sebelum`, `jabatan_setelah`, `unit`) VALUES
@@ -551,61 +555,61 @@ INSERT INTO `tb_riwayatkp` (`nip`, `nama`, `tgl`, `jabatan_sebelum`, `jabatan_se
 --
 
 --
--- Indexes for table `r_keluarga`
+-- Indeks untuk tabel `r_keluarga`
 --
 ALTER TABLE `r_keluarga`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `r_kepegawaian`
+-- Indeks untuk tabel `r_kepegawaian`
 --
 ALTER TABLE `r_kepegawaian`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `r_pendidikan`
+-- Indeks untuk tabel `r_pendidikan`
 --
 ALTER TABLE `r_pendidikan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_daftargaji`
+-- Indeks untuk tabel `tb_daftargaji`
 --
 ALTER TABLE `tb_daftargaji`
   ADD PRIMARY KEY (`id_daftargaji`);
 
 --
--- Indexes for table `tb_data_gaji`
+-- Indeks untuk tabel `tb_data_gaji`
 --
 ALTER TABLE `tb_data_gaji`
   ADD PRIMARY KEY (`nip`);
 
 --
--- Indexes for table `tb_golongan`
+-- Indeks untuk tabel `tb_golongan`
 --
 ALTER TABLE `tb_golongan`
   ADD PRIMARY KEY (`id_golongan`);
 
 --
--- Indexes for table `tb_info`
+-- Indeks untuk tabel `tb_info`
 --
 ALTER TABLE `tb_info`
   ADD PRIMARY KEY (`id_info`);
 
 --
--- Indexes for table `tb_kadis`
+-- Indeks untuk tabel `tb_kadis`
 --
 ALTER TABLE `tb_kadis`
   ADD PRIMARY KEY (`nip`);
 
 --
--- Indexes for table `tb_kgb`
+-- Indeks untuk tabel `tb_kgb`
 --
 ALTER TABLE `tb_kgb`
   ADD PRIMARY KEY (`id_kgb`);
 
 --
--- Indexes for table `tb_naik_gaji`
+-- Indeks untuk tabel `tb_naik_gaji`
 --
 ALTER TABLE `tb_naik_gaji`
   ADD PRIMARY KEY (`nip`),
@@ -613,19 +617,19 @@ ALTER TABLE `tb_naik_gaji`
   ADD KEY `nama` (`nama`);
 
 --
--- Indexes for table `tb_pangkat`
+-- Indeks untuk tabel `tb_pangkat`
 --
 ALTER TABLE `tb_pangkat`
   ADD PRIMARY KEY (`id_pangkat`);
 
 --
--- Indexes for table `tb_pegawai`
+-- Indeks untuk tabel `tb_pegawai`
 --
 ALTER TABLE `tb_pegawai`
   ADD PRIMARY KEY (`nip`);
 
 --
--- Indexes for table `tb_pengguna`
+-- Indeks untuk tabel `tb_pengguna`
 --
 ALTER TABLE `tb_pengguna`
   ADD PRIMARY KEY (`id_pengguna`),
@@ -634,90 +638,90 @@ ALTER TABLE `tb_pengguna`
   ADD KEY `username` (`username`);
 
 --
--- Indexes for table `tb_pensiun`
+-- Indeks untuk tabel `tb_pensiun`
 --
 ALTER TABLE `tb_pensiun`
   ADD PRIMARY KEY (`nip`);
 
 --
--- Indexes for table `tb_pkgb`
+-- Indeks untuk tabel `tb_pkgb`
 --
 ALTER TABLE `tb_pkgb`
   ADD PRIMARY KEY (`nip`),
   ADD KEY `ket` (`ket`);
 
 --
--- Indexes for table `tb_ppensiun`
+-- Indeks untuk tabel `tb_ppensiun`
 --
 ALTER TABLE `tb_ppensiun`
   ADD PRIMARY KEY (`nip`);
 
 --
--- Indexes for table `tb_profil`
+-- Indeks untuk tabel `tb_profil`
 --
 ALTER TABLE `tb_profil`
   ADD PRIMARY KEY (`id_profil`);
 
 --
--- Indexes for table `tb_riwayatkp`
+-- Indeks untuk tabel `tb_riwayatkp`
 --
 ALTER TABLE `tb_riwayatkp`
   ADD PRIMARY KEY (`nip`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `r_keluarga`
+-- AUTO_INCREMENT untuk tabel `r_keluarga`
 --
 ALTER TABLE `r_keluarga`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `r_kepegawaian`
+-- AUTO_INCREMENT untuk tabel `r_kepegawaian`
 --
 ALTER TABLE `r_kepegawaian`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `r_pendidikan`
+-- AUTO_INCREMENT untuk tabel `r_pendidikan`
 --
 ALTER TABLE `r_pendidikan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tb_golongan`
+-- AUTO_INCREMENT untuk tabel `tb_golongan`
 --
 ALTER TABLE `tb_golongan`
   MODIFY `id_golongan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `tb_info`
+-- AUTO_INCREMENT untuk tabel `tb_info`
 --
 ALTER TABLE `tb_info`
   MODIFY `id_info` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `tb_kgb`
+-- AUTO_INCREMENT untuk tabel `tb_kgb`
 --
 ALTER TABLE `tb_kgb`
   MODIFY `id_kgb` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `tb_pangkat`
+-- AUTO_INCREMENT untuk tabel `tb_pangkat`
 --
 ALTER TABLE `tb_pangkat`
   MODIFY `id_pangkat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `tb_pengguna`
+-- AUTO_INCREMENT untuk tabel `tb_pengguna`
 --
 ALTER TABLE `tb_pengguna`
-  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id_pengguna` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
--- AUTO_INCREMENT for table `tb_profil`
+-- AUTO_INCREMENT untuk tabel `tb_profil`
 --
 ALTER TABLE `tb_profil`
   MODIFY `id_profil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
