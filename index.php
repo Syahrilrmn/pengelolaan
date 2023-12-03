@@ -262,12 +262,6 @@ while ($data = $sql->fetch_assoc()) {
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="?page=data-status" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>Status Keadaan Pegawai</p>
-										</a>
-									</li>
-									<li class="nav-item">
 										<a href="?page=kenaikan-pegawai" class="nav-link">
 											<i class="far fa-circle nav-icon"></i>
 											<p>Kenaikan Pangkat Pegawai</p>
