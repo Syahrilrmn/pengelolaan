@@ -261,6 +261,19 @@ while ($data = $sql->fetch_assoc()) {
 											<p>Status Keadaan Pegawai</p>
 										</a>
 									</li>
+									<li class="nav-item">
+										<a href="?page=data-status" class="nav-link">
+											<i class="far fa-circle nav-icon"></i>
+											<p>Status Keadaan Pegawai</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="?page=kenaikan-pegawai" class="nav-link">
+											<i class="far fa-circle nav-icon"></i>
+											<p>Kenaikan Pangkat Pegawai</p>
+										</a>
+									</li>
+
 
 
 								</ul>
@@ -537,6 +550,12 @@ while ($data = $sql->fetch_assoc()) {
 									<p>
 										Pengumuman
 									</p>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="?page=kenaikan" class="nav-link">
+									<i class="nav-icon fas fa-envelope"></i>
+									<p>Kenaikan Pangkat</p>
 								</a>
 							</li>
 
@@ -895,12 +914,18 @@ while ($data = $sql->fetch_assoc()) {
 							case 'data-pegawai_user2':
 								include "admin/pegawai/data_pegawai_user2.php";
 								break;
-								case 'data-status':
-									include "admin/pegawai/status.php";
-									break;
-								case 'edit-status-01':
-									include "admin/pegawai/edit_status.php";
-									break;
+							case 'data-status':
+								include "admin/pegawai/status.php";
+								break;
+							case 'edit-status-01':
+								include "admin/pegawai/edit_status.php";
+								break;
+							case 'kenaikan-pegawai':
+								include "admin/pegawai/kenaikan.php";
+								break;
+							case 'edit-pangkat-01':
+								include "admin/pegawai/edit_pangkat.php";
+								break;
 
 								//User Pegawai
 							case 'tampil-data':
@@ -971,6 +996,10 @@ while ($data = $sql->fetch_assoc()) {
 								break;
 							case 'laporan-naik_gaji':
 								include "admin/naik_gaji/laporan_naik_gaji.php";
+								break;
+								//pangkat
+							case 'kenaikan':
+								include "pegawai/pangkat/data_pangkat.php";
 								break;
 
 								//kgb
@@ -1191,11 +1220,11 @@ while ($data = $sql->fetch_assoc()) {
 			return e;
 		}
 	</script>
-	    <script>
-$(document).ready(function () {
-    $('#example1').DataTable();
-});
-</script>
+	<script>
+		$(document).ready(function() {
+			$('#example1').DataTable();
+		});
+	</script>
 
 
 </body>

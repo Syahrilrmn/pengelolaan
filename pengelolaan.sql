@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Des 2023 pada 10.44
+-- Waktu pembuatan: 03 Des 2023 pada 06.23
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -337,8 +337,8 @@ CREATE TABLE `tb_pegawai` (
 --
 
 INSERT INTO `tb_pegawai` (`nip`, `nama`, `karpeg`, `jk`, `tempat_lahir`, `tanggal_lahir`, `pangkat`, `golongan`, `jabatan`, `unit`, `tmt`, `foto`, `ket`) VALUES
-('19630001', 'Wafda', 'B 0001', 'perempuan', 'Banjarmasin', '2023-08-10', 'Penata', 'IIIa', 'Kepala Bidang PTK', 'Dinas Pendidikan Kota Banjarmasin', '2023-08-03', 'foto cwe formal.jpg', 'NON AKTIF'),
-('196306061985032010', 'Rubina', 'N 007456', 'perempuan', 'Paringin', '1963-03-03', 'Pembina', 'IVb', 'Guru Mapel', 'SDN - SN PASAR LAMA 1', '1985-02-25', 'foto cwe formal.jpg', 'AKTIF'),
+('19630001', 'Wafda', 'B 0001', 'perempuan', 'Banjarmasin', '2023-08-10', 'Pengatur', 'IIIa', 'Kepala Bidang PTK', 'Dinas Pendidikan Kota Banjarmasin', '2023-08-03', 'foto cwe formal.jpg', 'NON AKTIF'),
+('196306061985032010', 'Rubina', 'N 007456', 'perempuan', 'Paringin', '1963-03-03', 'Pembina', 'IVb', 'Guru Mapel', 'SDN - SN PASAR LAMA 1', '1985-02-25', 'foto cwe formal.jpg', 'NON AKTIF'),
 ('196410031989021002', 'Muhammad Zikri', ' P 012511', 'laki-laki', 'Banjarmasin', '1964-10-03', 'Pembina', 'IVb', 'Guru Mapel', 'SMP NEGERI 15', '1989-02-01', 'fto laki-laki formal.jpg', 'AKTIF'),
 ('196603241988042001', 'Yesni Mudiarti', 'N 007891', 'perempuan', 'Tabalong', '1966-03-24', 'Pembina', 'IVb', 'Kepala Sekolah', 'SD KARTIKA V-2', '1988-04-01', 'foto cwe formal.jpg', 'AKTIF'),
 ('196608111989021001', 'Abdul Hamid', 'E 031255', 'laki-laki', 'Awang', '1966-08-11', 'Pembina', 'IVc', 'Guru Mapel', 'SMP NEGERI 01', '1989-02-01', 'fto laki-laki formal.jpg', 'AKTIF'),
